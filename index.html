@@ -252,7 +252,7 @@
                               width: 469px;
                               font-size: 0.75rem;
                             "
-                            >SHASHWAT GOYAL</span
+                            >SHWETABH NIKET</span
                           >
                         </div>
                       </td>
@@ -266,10 +266,14 @@
                                   align="right"
                                   style="margin-right: 20px"
                                 >
-                                  <span
-                                    id="ctl00_lbl_current_date"
+                                <span id="current_day"
                                     style="color: #211d70; font-weight: bold; font-size: 0.75rem"
-                                    >Friday, October 20, 2023</span
+                                    >, October </span
+                                  >
+                                  <span
+                                    id="current_date"
+                                    style="color: #211d70; font-weight: bold; font-size: 0.75rem"
+                                    >, 2023</span
                                   >&nbsp;
                                   <span
                                     id="ctl00_lbl_spacer"
@@ -430,25 +434,25 @@
                                                 1
                                               </td>
                                               <td style="border-color: Black">
-                                                2022A7PS0115P
+                                                2021B5A70923P
                                               </td>
                                               <td style="border-color: Black">
-                                                SHASHWAT GOYAL
+                                                SHWETABH NIKET
                                               </td>
                                               <td style="border-color: Black">
                                                 Shankar Bhawan
                                               </td>
                                               <td style="border-color: Black">
-                                                4112
+                                                3131
                                               </td>
                                               <td style="border-color: Black">
-                                                19-Oct-2023
+                                                24-Oct-2023
                                               </td>
                                               <td style="border-color: Black">
-                                                20-Oct-2023
+                                                25-Oct-2023
                                               </td>
                                               <td style="border-color: Black">
-                                                going back to home.
+                                                department outing.
                                               </td>
                                               <td
                                                 style="
@@ -460,7 +464,7 @@
                                                 Approved
                                               </td>
                                               <td style="border-color: Black">
-                                                26-Oct-2023
+                                                23-Oct-2023
                                               </td>
                                               <td style="border-color: Black">
                                                 <a
@@ -492,16 +496,16 @@
                                                 1
                                               </td>
                                               <td style="border-color: Black">
-                                                2022A7PS0115P
+                                                2021B5A70923P
                                               </td>
                                               <td style="border-color: Black">
-                                                SHASHWAT GOYAL
+                                                SHWETABH NIKET
                                               </td>
                                               <td style="border-color: Black">
                                                 Shankar Bhawan
                                               </td>
                                               <td style="border-color: Black">
-                                                4112
+                                                3131
                                               </td>
                                               <td style="border-color: Black">
                                                 15-Oct-2023
@@ -558,16 +562,16 @@
                                                 2
                                               </td>
                                               <td style="border-color: Black">
-                                                2022A7PS0115P
+                                                2021B5A70923P
                                               </td>
                                               <td style="border-color: Black">
-                                                SHASHWAT GOYAL
+                                                SHWETABH NIKET
                                               </td>
                                               <td style="border-color: Black">
                                                 Shankar Bhawan
                                               </td>
                                               <td style="border-color: Black">
-                                                4112
+                                                3131
                                               </td>
                                               <td style="border-color: Black">
                                                 16-Sep-2023
@@ -625,16 +629,16 @@
                                                 2
                                               </td>
                                               <td style="border-color: Black">
-                                                2022A7PS0115P
+                                                2021B5A70923P
                                               </td>
                                               <td style="border-color: Black">
-                                                SHASHWAT GOYAL
+                                                SHWETABH NIKET
                                               </td>
                                               <td style="border-color: Black">
                                                 Shankar Bhawan
                                               </td>
                                               <td style="border-color: Black">
-                                                4112
+                                                3131
                                               </td>
                                               <td style="border-color: Black">
                                                 06-Sep-2023
@@ -720,3 +724,38 @@
     </form>
   </body>
 </html>
+
+
+<script>
+  let date = document.getElementById('current_date');
+  let dayShower = document.getElementById('current_day');
+  let today = new Date();
+  let day = today.getDay();
+  let dayName = "";
+  switch (day){
+    case 0:
+      dayName = "Sunday";
+      break;
+    case 1:
+      dayName = "Monday";
+      break;
+    case 2:
+      dayName = "Tuesday";
+      break;
+    case 3:
+      dayName = "Wednesday";
+      break;
+    case 4:
+      dayName = "Thursday";
+      break;
+    case 5:
+      dayName = "Friday";
+      break;
+    case 6:
+      dayName = "Saturday";
+      break;
+  }
+  const number = today.getDate();
+  dayShower.innerHTML = dayName + dayShower.innerHTML;
+  date.innerHTML = number + date.innerHTML;
+</script>
